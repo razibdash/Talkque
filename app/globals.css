@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 245 247 248;
+  --foreground: 15 23 42;
+}
+
+* {
+  border-color: rgb(226 232 240);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+::selection {
+  background: rgb(167 243 208);
+  color: rgb(6 78 59);
+}
+
+@layer components {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+}
