@@ -8,7 +8,7 @@ export type ProviderCategory =
   | 'messaging'
   | 'billing';
 
-export type ProviderConnection = {
+export type ProviderConnectionSummary = {
   category: ProviderCategory;
   provider: string;
   enabled: boolean;

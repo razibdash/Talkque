@@ -1,5 +1,9 @@
-export * from './agents';
-export * from './calls';
 export * from './database';
-export * from './knowledge-base';
-export * from './providers';
+export type { Agent } from './agents';
+export type { CallStatus } from './calls';
+export type {
+  KnowledgeDocument,
+  KnowledgeDocumentStatus,
+  KnowledgeSearchResult,
+} from './knowledge-base';
+export type { ProviderCategory, ProviderConnectionSummary } from './providers';
