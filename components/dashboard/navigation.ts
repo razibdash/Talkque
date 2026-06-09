@@ -17,7 +17,7 @@ export const dashboardNavigation = [
   { label: 'Knowledge base', href: '/knowledge-base', icon: BookOpen },
   { label: 'Automations', href: '/automations', icon: Network },
   { label: 'Analytics', href: '/analytics', icon: BarChart3 },
-  { label: 'Team', href: '/team', icon: Users },
   { label: 'Billing', href: '/billing', icon: CreditCard },
+  { label: 'Team', href: '/team', icon: Users },
   { label: 'Settings', href: '/settings', icon: Settings },
 ] as const;

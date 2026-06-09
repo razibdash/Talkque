@@ -516,6 +516,54 @@ export type Database = {
           created_at?: string;
         }
       >;
+      kb_chunk_translations: TableDefinition<
+        {
+          id: string;
+          organization_id: string;
+          chunk_id: string;
+          language_code: string;
+          dialect_code: string | null;
+          translated_content: string;
+          translation_provider: string | null;
+          translation_model: string | null;
+          source_content_hash: string;
+        } & Timestamps,
+        {
+          id?: string;
+          organization_id: string;
+          chunk_id: string;
+          language_code: string;
+          dialect_code?: string | null;
+          translated_content: string;
+          translation_provider?: string | null;
+          translation_model?: string | null;
+          source_content_hash: string;
+          created_at?: string;
+          updated_at?: string;
+        }
+      >;
+      kb_chunk_embeddings_1536: TableDefinition<
+        {
+          id: string;
+          organization_id: string;
+          chunk_id: string;
+          embedding_provider: string;
+          embedding_model: string;
+          embedded_content_hash: string;
+          embedding: string;
+        } & Timestamps,
+        {
+          id?: string;
+          organization_id: string;
+          chunk_id: string;
+          embedding_provider?: string;
+          embedding_model?: string;
+          embedded_content_hash: string;
+          embedding: string;
+          created_at?: string;
+          updated_at?: string;
+        }
+      >;
       kb_gaps: TableDefinition<
         {
           id: string;

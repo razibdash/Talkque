@@ -1,13 +1,29 @@
 import { DashboardSidebar } from './sidebar';
 import { DashboardTopbar } from './topbar';
 
-export function DashboardShell({ children }: { children: React.ReactNode }) {
+type DashboardShellProps = {
+  children: React.ReactNode;
+  organizationName: string;
+  environment: string;
+  userEmail: string;
+};
+
+export function DashboardShell({
+  children,
+  organizationName,
+  environment,
+  userEmail,
+}: DashboardShellProps) {
   return (
     <div className="min-h-screen bg-surface">
-      <DashboardSidebar />
+      <DashboardSidebar organizationName={organizationName} />
       <div className="lg:pl-64">
-        <DashboardTopbar />
-        <main className="p-4 md:p-6 lg:p-8">{children}</main>
+        <DashboardTopbar
+          organizationName={organizationName}
+          environment={environment}
+          userEmail={userEmail}
+        />
+        <main className="mx-auto w-full max-w-[1600px] p-4 md:p-6 lg:p-8">{children}</main>
       </div>
     </div>
   );
